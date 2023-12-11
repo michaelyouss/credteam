@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<html dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CRUDS.css">
+    <title>CRUDS</title>
+</head>
+
+<body>
+    <div class="crud">
+        <div class="head">
+            <h1>سوبر ماركت</h1>
+            <h1>العائله</ا>
+        </div>
+
+
+        <!--============================ Start input=================== -->
+        <div class="inputs">
+            <input id="title" type="text" placeholder=" اسم المنتج">
+            <div class="price">
+                <input onKeyup="getTotal()" id="price" type="number" placeholder="السعر">
+                <input onKeyup="getTotal()" id="taxes" type="number" placeholder="الضرائب">
+                <input onKeyup="getTotal()" id="ads" type="number" placeholder="تحميل">
+                <input onKeyup="getTotal()" id="discound" type="number" placeholder="تخفيض">
+                <small class="smal" style="color: #fff;" id="total">hgsuv</small>
+            </div>
+            <input id="count" type="number" placeholder="العدد">
+            <input id="category" type="text" placeholder=" التصنيف">
+
+            <button id="submit">انشاء</button>
+
+        </div>
+        <!--============================ End input ====================== -->
+
+        <!--============================ Start outputs=================== -->
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup=" searchData(this.value)" id="search" type="text" placeholder="بحث ب اسم المنتج">
+                <div class="btnSeatch">
+                    <button style="width: 100%;" onclick="getSearchMood(this.id)" id="searchCategory">البحث
+                    </button>
+                    <!-- <button onclick="getSearchMood(this.id)" id="searchTiile">البحث ب اسم المنتج</button> -->
+
+                </div>
+            </div>
+            <div id="deleteAll">
+
+            </div>
+            <table>
+                <tr>
+                    <th>رقم</th>
+                    <th>اسم المنتج</th>
+                    <th>السعر</th>
+                    <th>الضرائب</th>
+                    <th>تحميل</th>
+                    <th>تخفيض</th>
+                    <th>العدد</th>
+                    <th> التصنيف</th>
+                    <th>حذف</th>
+                    <th>تعديل</th>
+
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+        <!--============================ End outputs ==================== -->
+    </div>
+    <script src="CRUDS.js"></script>
+</body>
+
+</html>
